@@ -18,18 +18,19 @@ const ProductList = () => {
     <div className="container mt-5">
         <div className="columns is-multiline">
             {products.map((product)=>(
-                <div className="column is-one-quarter">
+                <div className="column is-one-quarter" key={product.id}>
                 <div className="card">
                   <div className="card-image">
                     <figure className="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image"/>
+                      <img 
+                        src={product.url} 
+                        alt="Image"/>
                     </figure>
                   </div>
                   <div className="card-content">
                     <div className="media">
                       <div className="media-content">
-                        <p className="title is-4">John Smith</p>
-                        <p className="subtitle is-6">@johnsmith</p>
+                        <p className="title is-4">{product.name}</p>
                       </div>
                     </div>
                   </div>

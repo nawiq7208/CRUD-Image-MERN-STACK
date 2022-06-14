@@ -7,7 +7,6 @@ import {
     deleteProduct
 } from "../controllers/ProductController.js";
 
-
 const router = express.Router();
 
 router.get('/products', getProducts);
